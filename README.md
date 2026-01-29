@@ -1,63 +1,149 @@
-Network Reconnaissance and Vulnerability Assessment Using Nmap
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Network+Reconnaissance+with+Nmap;Vulnerability+Assessment+Lab;Offensive+Security+Project&font=Fira+Code&center=true&width=950&height=45&color=00BFFF&vCenter=true&pause=1000" />
+</p>
 
-🧾 Project Description
+<h1 align="center">🛰️ Network Reconnaissance & Vulnerability Assessment Using Nmap</h1>
 
-This project focuses on performing network reconnaissance and security assessment using Nmap (Network Mapper). Nmap is a powerful open-source tool used to discover live hosts, open ports, running services, and operating systems in a network. The project was conducted in a controlled lab environment using Kali Linux and a target machine to analyze network exposure and potential security risks.
+<p align="center">
+  <img src="https://img.shields.io/badge/Tool-Nmap-blue?style=for-the-badge&logo=nmap" />
+  <img src="https://img.shields.io/badge/Category-Network%20Pentesting-red?style=for-the-badge&logo=kalilinux" />
+  <img src="https://img.shields.io/badge/Environment-Lab%20Based-success?style=for-the-badge" />
+</p>
 
-🛠 Tools & Technologies
+---
 
-Kali Linux
+## 🧾 Project Overview
 
-Nmap
+This project demonstrates **network reconnaissance and vulnerability assessment** using **Nmap (Network Mapper)** — one of the most essential tools in penetration testing and SOC investigations.
 
-Metasploitable / Target Machine
+The assessment was performed in a **controlled lab environment** using **Kali Linux** and a deliberately vulnerable target machine. The objective was to **discover hosts, identify open ports, detect services, fingerprint operating systems, and analyze potential security risks**.
 
-Local Network
+> ⚠️ This project is conducted strictly for **educational and ethical security research purposes**.
 
-🎯 Objectives
+---
 
-To identify active hosts in a network
+## 🛠 Tools & Technologies
 
-To discover open ports and running services
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=linux" />
+</p>
 
-To perform OS and service version detection
+| Tool | Purpose |
+|-----|--------|
+| 🐉 **Kali Linux** | Penetration testing platform |
+| 🛰️ **Nmap** | Network discovery & port scanning |
+| 🎯 **Metasploitable / Target VM** | Vulnerable test machine |
+| 🌐 **Local Network** | Testing environment |
 
-To analyze network security weaknesses
+---
 
-🔍 Methodology
+## 🎯 Objectives
 
-Identified the target IP address using netdiscover.
+- Identify **active hosts** in a network
+- Discover **open ports** and exposed services
+- Perform **service & version detection**
+- Fingerprint **operating systems**
+- Analyze **network security weaknesses**
+- Understand attacker reconnaissance techniques
 
-Performed basic and full port scans using Nmap.
+---
 
-Used TCP SYN scans, TCP connect scans, and UDP scans.
+## 🔍 Methodology
 
-Conducted service and version detection using -sV.
+### 1️⃣ Host Discovery
+- Identified live hosts using **netdiscover**
+- Confirmed reachable targets within the local network
 
-Performed OS fingerprinting using -O.
+### 2️⃣ Port Scanning
+- Conducted basic and full TCP port scans
+- Identified exposed services and attack surface
 
-Used aggressive scanning -A to gather detailed information.
+### 3️⃣ Service & Version Detection
+- Used Nmap scripting and probes to identify service versions
+- Flagged outdated or vulnerable services
 
-Documented all scan results for analysis.
+### 4️⃣ OS Fingerprinting
+- Detected target operating system using TCP/IP stack behavior
 
-🧪 Key Nmap Scans Used
+### 5️⃣ Aggressive Enumeration
+- Combined OS detection, version detection, scripts, and traceroute
+- Collected maximum intelligence in a single scan
 
-Basic scan: nmap <IP>
+### 6️⃣ Documentation
+- Recorded open ports, services, and versions
+- Analyzed findings from an attacker and defender perspective
 
-Full port scan: nmap -p- <IP>
+---
 
-Service detection: nmap -sV <IP>
+## 🧪 Key Nmap Scans Used
 
-OS detection: nmap -O <IP>
+```bash
+# Basic Scan
+nmap <IP>
 
-Aggressive scan: nmap -A <IP>
+# Full Port Scan
+nmap -p- <IP>
 
-TCP SYN scan: nmap -sS <IP>
+# Service & Version Detection
+nmap -sV <IP>
 
-⚠ Security Findings
+# OS Detection
+nmap -O <IP>
 
-The scans revealed open ports and active services that could be targeted by attackers. Service version detection helped identify outdated or vulnerable services, which could be exploited if not properly secured.
+# Aggressive Scan
+nmap -A <IP>
 
-🔐 Conclusion
+# TCP SYN Scan (Stealth)
+nmap -sS <IP>
+````
 
-This project helped in understanding how attackers and security professionals use Nmap for network discovery and vulnerability assessment. It improved practical knowledge of penetration testing, reconnaissance, and network security analysis.
+---
+
+## ⚠️ Security Findings & Analysis
+
+🚨 The reconnaissance phase revealed:
+
+* Multiple **open ports** exposing network services
+* **Service versions** that may contain known vulnerabilities
+* Increased **attack surface** due to unnecessary exposed services
+
+Such information can be leveraged by attackers for:
+
+* Exploitation
+* Lateral movement
+* Privilege escalation
+* Persistent access
+
+---
+
+## 🔐 Defensive Insights (Blue Team View)
+
+🛡️ Based on findings, recommended mitigations include:
+
+* Close unused ports and services
+* Apply timely **patching and updates**
+* Implement **network segmentation**
+* Use **firewalls and IDS/IPS**
+* Monitor scans via **SOC alerting**
+
+---
+
+## 📁 Project Outcome
+
+✅ Learned real-world network reconnaissance techniques
+✅ Understood how attackers map networks
+✅ Improved Nmap command proficiency
+✅ Enhanced network security analysis skills
+
+This project strengthened my **foundational penetration testing and SOC investigation capabilities**.
+
+---
+
+## ⚠️ Legal & Ethical Disclaimer
+
+> All scans were conducted in a **controlled lab environment** on systems owned by me or explicitly permitted for testing.
+> Unauthorized scanning of live networks is illegal.
+
+---
+⭐ **If this repository helped you, consider starring it!**
+🛡️ *Reconnaissance is the first step to both attack and defense.*
